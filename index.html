@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BookNest - Online Book Store</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <div class="logo">BookNest 📚</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#books">Books</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button id="cartButton">
+            🛒 Cart <span id="cartCount">0</span>
+        </button>
+    </header>
+
+    <!-- Home Section -->
+    <section class="hero" id="home">
+        <div>
+            <h1>Find Your Next<br>Favorite Book</h1>
+            <p>Discover amazing stories and explore new worlds.</p>
+
+            <a href="#books" class="shopButton">
+                Explore Books
+            </a>
+        </div>
+    </section>
+
+    <!-- Book Collection -->
+    <section class="bookSection" id="books">
+
+        <h2>Our Book Collection</h2>
+        <p class="subtitle">Choose your favorite book</p>
+
+        <!-- Search -->
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Search books..."
+        >
+
+        <!-- Categories -->
+        <div class="categories">
+            <button onclick="filterBooks('All')">All</button>
+            <button onclick="filterBooks('Fiction')">Fiction</button>
+            <button onclick="filterBooks('Fantasy')">Fantasy</button>
+            <button onclick="filterBooks('Self-help')">Self-help</button>
+        </div>
+
+        <!-- Books will appear here -->
+        <div class="bookContainer" id="bookContainer"></div>
+
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About BookNest</h2>
+        <p>
+            BookNest is a simple online bookstore where
+            book lovers can discover and explore books.
+        </p>
+    </section>
+
+    <!-- Shopping Cart -->
+    <div class="cartBox" id="cartBox">
+
+        <h2>Your Shopping Cart</h2>
+
+        <button id="closeCart">Close ✖</button>
+
+        <div id="cartItems"></div>
+
+        <h3>Total: ₹<span id="totalPrice">0</span></h3>
+
+    </div>
+
+    <footer>
+        <p>© 2026 BookNest | Online Book Store</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
